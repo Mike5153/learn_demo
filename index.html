@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 锁定 4:3 视口，在 iPad mini 2 上彻底禁用一切手势缩放与回弹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <!-- iOS 专用全屏 PWA 属性（老人家一键从桌面直达，无浏览器任何工具栏） -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="工夫茶识字" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>工夫茶识字 - 潮汕老人生活识字</title>
+
+    <style>
+      /* 抹除 iOS Safari 所有原生手势干扰 */
+      * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+      }
+
+      html, body, #app {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #1a1512; /* 潮汕深沉老红木色 */
+        font-family: -apple-system, "Yuanti SC", "YouYuan", "Hiragino Maru Gothic ProN", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
